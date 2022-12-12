@@ -15,7 +15,7 @@
 
             var curr = 0;
             while(numPages > curr){
-              $('<li><a href="./#" class="page_link">'+(curr+1)+'</a></li>').appendTo($self);
+              $('<li><a href="/#" class="page_link">'+(curr+1)+'</a></li>').appendTo($self);
               curr++;
             }           
 

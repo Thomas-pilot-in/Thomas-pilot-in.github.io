@@ -42,7 +42,7 @@
                 
                 var niveau_1 = ''
                 niveau_1 += '<li class="" id="summary-' + no + '"' 
-                niveau_1 += '>' + '<a class="smoothScroll" href="./#title-' + no + '">' + $(title).text() + '</a>' + '</li>'
+                niveau_1 += '>' + '<a class="smoothScroll" href="/#title-' + no + '">' + $(title).text() + '</a>' + '</li>'
                 // on met dans le sommaire
                 $('#summary .level1').append(niveau_1);				 
                 // sous title repart de 0
@@ -64,7 +64,7 @@
                 // + le lien de l'ancre vers le sous-title
                 $('#summary-' + no + ' ol').append(
 				  '<li>'
-				   + '<a href="./#title-' + no + '-' + no2 + '">' + $(title).text() + '</a>'
+				   + '<a href="/#title-' + no + '-' + no2 + '">' + $(title).text() + '</a>'
 				 + '</li>');
 
             } else if (title.tagName == "H4") {
@@ -83,7 +83,7 @@
                 // + le lien de l'ancre vers le sous-title
                 $('#summary-' + no + ' ol').append(
 				  '<li>'
-				   + '<a href="./#title-' + no + '-' + no3 + '">' + $(title).text() + '</a>'
+				   + '<a href="/#title-' + no + '-' + no3 + '">' + $(title).text() + '</a>'
 				 + '</li>');
 
             }
@@ -91,7 +91,7 @@
              {
                  if (no > totAff)
                 {
-                    $('#summary ul.level1').after('<a href="./#" class="More">Voir la suite du sommaire...</a>')           
+                    $('#summary ul.level1').after('<a href="/#" class="More">Voir la suite du sommaire...</a>')           
                 }  
                 else
                 {
