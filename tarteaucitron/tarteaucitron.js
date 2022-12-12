@@ -1256,7 +1256,7 @@ var tarteaucitron = {
             url += 'c=' + encodeURIComponent(tarteaucitron.proTemp) + '&';
             url += '_' + timestamp;
             
-            div.innerHTML = '<img src="' + url + '" style="display:none" />';
+            div.innerHTML = '<img src="./' + url + '" style="display:none" />';
             
             tarteaucitron.proTemp = '';
         }
