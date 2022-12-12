@@ -1,2 +1,2 @@
-﻿<script type="text/javascript" src="./https://w.sharethis.com/button/buttons.js"></script>
+﻿<script type="text/javascript" src="https://w.sharethis.com/button/buttons.js"></script>
 <script type="text/javascript">stLight.options({publisher: "de9c823c-3968-43e0-a3aa-e0b07e819c54", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
