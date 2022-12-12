@@ -1,0 +1,339 @@
+.ddsmoothmenu{
+    background: #439ec6;
+    font-size: 13px;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    /*position: absolute;*/
+    top: 0;
+    height: 52px;
+    z-index: 500;
+    -ms-flex-direction: right;
+    -webkit-flex-direction: right;
+    flex-direction: right;
+    max-width: 100%;
+    left: 0;
+
+    -moz-box-shadow: 0px -8px 10px -8px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px -8px 10px -8px rgba(0,0,0,0.3);
+    -o-box-shadow: 0px -8px 10px -8px rgba(0,0,0,0.3);
+    box-shadow: 0px -8px 10px -8px rgba(0,0,0,0.3);
+}
+
+.ddsmoothmenu ul{
+    z-index:1;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+}
+
+/*Top level list items*/
+.ddsmoothmenu ul li{
+    position: relative;
+    display: inline;
+    float: left;
+    height: 52px;
+    padding-top: 2px;
+    border-top: 5px solid #439ec6;
+}
+
+.ddsmoothmenu ul li:hover
+,.ddsmoothmenu ul li.active
+,.ddsmoothmenu ul li.over
+{                 
+    border-top: #3aaadc 5px solid;
+}
+.ddsmoothmenu ul li:hover a span
+,.ddsmoothmenu ul li.active a span
+,.ddsmoothmenu ul li.over a span
+{                 
+    color: #3aaadc;
+}
+/*Top level menu link items style */
+.ddsmoothmenu ul li a{
+    vertical-align: middle;
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;                
+    /* text-shadow:0 1px 1px rgba(0, 0, 0, 0.4); */
+    font-size: 14px; 
+    height: 45px;               
+    margin-top: 2px;
+    letter-spacing: 0px;
+    padding: 0 12px !important;
+    text-transform: uppercase;
+    display: table-cell; 
+}
+.lid_4 .ddsmoothmenu ul li a
+{   
+}
+.ddsmoothmenu ul li a:hover
+,.ddsmoothmenu ul li a.highlighted
+,.ddsmoothmenu ul li a.selected
+{
+
+}
+.ddsmoothmenu ul li a span
+{
+    text-align: center !important;
+}
+
+* html .ddsmoothmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.ddsmoothmenu ul li a:link, .ddsmoothmenu ul li a:visited{
+}
+
+.ddsmoothmenu ul li a.selected { /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+}
+
+.ddsmoothmenu ul li a:hover{
+}
+    
+/* sub menus */
+.ddsmoothmenu ul li ul{
+    list-style-type: none;
+    position: absolute;
+    left: -3000px;
+    display: none; /*collapse all sub menus to begin with*/
+    visibility: hidden;
+    list-style: none;
+    background: #fafafa;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    margin-top: 5px;
+}
+
+/*Sub level menu list items (alters style from Top level List Items)*/
+.ddsmoothmenu ul li ul li{
+    display: list-item;
+    float: none !important;
+    width: 200px;
+    height: auto;
+    border: none;
+}
+.ddsmoothmenu ul li ul li:hover
+,.ddsmoothmenu ul li ul li.active
+,.ddsmoothmenu ul li ul li.over
+{
+    background: rgba(139, 56, 117, 1);
+    border: none;
+    color: #fff;
+}
+.ddsmoothmenu ul li ul li:hover a 
+,.ddsmoothmenu ul li ul li.active a
+,.ddsmoothmenu ul li ul li.over a
+{
+    color: #fff;
+}
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.ddsmoothmenu ul li ul li ul{
+top: 0;
+}
+
+/* Sub level menu links style */
+.ddsmoothmenu ul li ul li a{
+    padding: 2% !important;
+    color: #687074;
+    margin: 0;
+    border-top-width: 0;
+    border-bottom: 1px solid #eee;
+    width: 96%;
+    display: block;
+    text-align: left;
+    height: auto !important;
+    background: none !important;
+}
+.ddsmoothmenu ul li ul li a span
+{
+    width: 100%;
+    display: block;
+    height: auto;
+}
+/* Holly Hack for IE \*/
+* html .ddsmoothmenu{height: 1%;} /*Holly Hack for IE7 and below*/
+
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass{
+position: absolute;
+top: 12px;
+right: 7px;
+display: none !important;
+}
+
+.rightarrowclass{
+position: absolute;
+top: 6px;
+right: 5px;
+}
+
+/* ######### CSS for shadow added to sub menus  ######### */
+
+.ddshadow{ 
+position: absolute;
+left: 0;
+top: 0;
+width: 0;
+height: 0;
+display: none !important;
+}
+
+.toplevelshadow{
+margin: 5px 0 0 5px; /* in NON CSS3 capable browsers gives the offset of the shadow */
+opacity: 0.8; /* shadow opacity mostly for NON CSS3 capable browsers. Doesn't work in IE */
+display: none !important;
+}
+
+.ddcss3support .ddshadow.toplevelshadow {
+margin: 0; /* in CSS3 capable browsers overrides offset from NON CSS3 capable browsers, allowing the box-shadow values in the next selector to govern that */
+/* opacity: 1; */ /* optionally uncomment this to remove partial opacity for browsers supporting a box-shadow property which has its own slight gradient opacity */
+display: none !important;
+}
+
+.ddcss3support .ddshadow {
+background-color: transparent;
+box-shadow: 5px 5px 5px #aaa; /* box-shadow color generally should be a little darker than that for the NON CSS3 capable browsers background-color */
+-moz-box-shadow: 5px 5px 5px #aaa;
+-webkit-box-shadow: 5px 5px 5px #aaa;
+display: none !important;
+}
+
+
+.ddsmoothmenu ul li.home  
+{
+    background: url(../img/home_blue.png) no-repeat center ;
+    border-top: 5px solid #439ec6;
+}
+.ddsmoothmenu ul li.home:hover
+,.ddsmoothmenu ul li.home.active
+,.ddsmoothmenu ul li.home.over
+{                 
+     background: url(../img/home_blue.png) no-repeat  transparent center ;
+     border-top: #3aaadc 5px solid;
+}
+.ddsmoothmenu ul li.home  a
+{
+    width: 50px;
+}
+.ddsmoothmenu ul li.home a span
+{
+    display: none;
+}
+
+/*==================================================== 
+******************************************************
+/*  DEVICES less than 1150 pixels wide
+******************************************************
+====================================================== */
+@media only screen and (max-width: 1150px) {
+    .ddsmoothmenu ul li a {
+    font-size: 13px;;
+    }
+
+} /**** end max width 1150px ****/
+
+
+/*==================================================== 
+******************************************************
+/*  DEVICES less than 900 pixels wide
+******************************************************
+====================================================== */
+@media only screen and (max-width: 900px) {
+    .ddsmoothmenu ul li a {
+        width: 67px;
+        font-size: 10px;
+    }
+
+} /**** end max width 900px ****/
+
+/*==================================================== 
+******************************************************
+/*  DEVICES less than 880 pixels wide
+******************************************************
+====================================================== */
+@media only screen and (max-width: 880px) {
+
+
+} /**** end max width 800px ****/
+
+/*==================================================== 
+******************************************************
+/*  DEVICES less than 800 pixels wide
+******************************************************
+====================================================== */
+@media only screen and (max-width: 800px) {
+
+
+    
+} /**** end max width 800px ****/
+
+/*==================================================== 
+******************************************************
+/*  DEVICES less than 600 pixels wide
+******************************************************
+====================================================== */
+@media only screen and (max-width: 600px) {
+
+
+
+}/**** end max width 600 ****/
+
+
+
+/*==================================================== 
+******************************************************
+/*  DEVICES less than 767 pixels wide 
+******************************************************
+====================================================== */
+@media only screen and (max-width: 767px) {
+/*** Header / Logo / Preheader Mobile Adjustments ***/
+
+
+
+}/**** end max width 767 ****/
+
+
+
+/* ================================================== 
+    MAIN RETINA BACKGROUND IMAGE REPLACEMENT & RETINA INFORMATION
+    http://weedygarden.net/2012/04/hi-res-retina-display-css-sprites/
+    http://www.kylejlarson.com/blog/2012/creating-retina-images-for-your-website/
+    http://www.webresourcesdepot.com/3-solutions-for-serving-high-res-images-to-retina-display-devices/
+================================================== */
+
+/*  change the webkit number to 1 to test on webkit to make sure 
+    the sizes and the images show up correctly then switch back before launch */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) 
+{
+
+
+
+}/* end desktop and main retina swapping */
+
+
+/*==================================================== 
+******************************************************
+/*  MOBILE SPECIFIC RETINA SWAPPING
+******************************************************
+====================================================== */
+
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 2),
+    only screen and (max-width: 767px) and (min-device-pixel-ratio: 2)
+{
+            
+
+
+
+}/*end mobile specific retina swapping */
+
+
+
