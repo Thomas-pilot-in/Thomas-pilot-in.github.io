@@ -61,7 +61,7 @@ function ouvrir(url, largeur, hauteur) {
 
                 //Reset the page's HTML with div's HTML only
                 document.body.innerHTML = 
-                  "<html><head><title></title></head><body><div id='main'><div id='conteneur'><div id='milieuPage'>" + 
+                  "<html><head><title></title><script src="https://cdnjs.cloudflare.com/ajax/libs/tarteaucitronjs/1.9.9/tarteaucitron.services.min.js" integrity="sha512-WNdKelegn5SdjKb9SAyWYHQUu8/8arzaUNLANJ2bBuNde3AA1ES82jBmZnZVNg6EN3JyrHS/w7YeZEb/5jg4Dw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script></head><body><div id='main'><div id='conteneur'><div id='milieuPage'>" + 
                   divElements + "</div></div></div></body>";
 
                 //Print Page
