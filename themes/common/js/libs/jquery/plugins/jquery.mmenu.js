@@ -158,7 +158,7 @@
 				var id = $menu.attr( 'id' );
 				if ( id && id.length )
 				{
-					click( 'a[href="#' + id + '"]',
+					click( 'a[href="./#' + id + '"]',
 						function()
 						{
 							$menu.trigger( evt( 'toggle' ) );
@@ -169,7 +169,7 @@
 				var id = $page.attr( 'id' );
 				if ( id && id.length )
 				{
-					click( 'a[href="#' + id + '"]',
+					click( 'a[href="./#' + id + '"]',
 						function()
 						{
 							$menu.trigger( evt( 'close' ) );
@@ -267,7 +267,7 @@
 
 					$t.attr( 'id', id );
 
-					var $btn = $( '<a class="' + cls( 'subopen' ) + '" href="#' + id + '" />' ).insertBefore( $a );
+					var $btn = $( '<a class="' + cls( 'subopen' ) + '" href="./#' + id + '" />' ).insertBefore( $a );
 					if ( !$a.is( 'a' ) )
 					{
 						$btn.addClass( cls( 'fullsubopen' ) );
@@ -279,7 +279,7 @@
 							id = $p.attr( 'id' ) || cls( 'p' + i );
 	
 						$p.attr( 'id', id );
-						$t.prepend( '<li class="' + cls( 'subtitle' ) + '"><a class="' + cls( 'subclose' ) + '" href="#' + id + '">' + $a.text() + '</a></li>' );
+						$t.prepend( '<li class="' + cls( 'subtitle' ) + '"><a class="' + cls( 'subclose' ) + '" href="./#' + id + '">' + $a.text() + '</a></li>' );
 					}
 				}
 			);
@@ -376,7 +376,7 @@
 					if ( id && id.length )
 					{
 						var $c = $( '<em class="' + cls( 'counter' ) + '" />' ),
-							$a = $('a.' + cls( 'subopen' ), $m).filter( '[href="#' + id + '"]' );
+							$a = $('a.' + cls( 'subopen' ), $m).filter( '[href="./#' + id + '"]' );
 
 						if ( !$a.parent().find( 'em.' + cls( 'counter' ) ).length )
 						{

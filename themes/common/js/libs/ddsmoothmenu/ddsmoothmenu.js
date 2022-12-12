@@ -128,7 +128,7 @@ closeall: function(e){
 	}
 },
 
-emptyhash: $('<a href="#"></a>').get(0).href,
+emptyhash: $('<a href="./#"></a>').get(0).href,
 
 buildmenu: function($, setting){
 	var smoothmenu = ddsmoothmenu;
@@ -398,7 +398,7 @@ if(
 	(function($){
 		var clicktogglable = false;
 		try {
-			$('<a href="#"></a>').toggle(function(){}, function(){clicktogglable = true;}).trigger('click').trigger('click');
+			$('<a href="./#"></a>').toggle(function(){}, function(){clicktogglable = true;}).trigger('click').trigger('click');
 		} catch(e){}
 		return !clicktogglable;
 	})(jQuery)

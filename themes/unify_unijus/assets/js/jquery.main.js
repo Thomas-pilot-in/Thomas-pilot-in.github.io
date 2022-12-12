@@ -239,7 +239,7 @@ function initOpenClose() {
 // initialize smooth anchor links
 function initAnchors() {
 	new SmoothScroll({
-		anchorLinks: 'a[href^="#"]:not([href="#"])',
+		anchorLinks: 'a[href^="#"]:not([href="./#"])',
 		activeClasses: 'link'
 	});
 }
@@ -305,7 +305,7 @@ function initFitVids() {
 			btnNext: 'a.btn-next',
 			generatePagination: false,
 			pagerList: '<ul>',
-			pagerListItem: '<li><a href="#"></a></li>',
+			pagerListItem: '<li><a href="./#"></a></li>',
 			pagerListItemText: 'a',
 			pagerLinks: '.pagination li',
 			currentNumber: 'span.current-num',
@@ -795,7 +795,7 @@ function initFitVids() {
 			btnNext: 'a.btn-next',
 			generatePagination: false,
 			pagerList: '<ul>',
-			pagerListItem: '<li><a href="#"></a></li>',
+			pagerListItem: '<li><a href="./#"></a></li>',
 			pagerListItemText: 'a',
 			pagerLinks: '.pagination li',
 			currentNumber: 'span.current-num',

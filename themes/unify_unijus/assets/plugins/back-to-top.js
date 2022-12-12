@@ -62,7 +62,7 @@ var scrolltotop={
 			if (document.all && !window.XMLHttpRequest && mainobj.$control.text()!='') //loose check for IE6 and below, plus whether control contains any text
 				mainobj.$control.css({width:mainobj.$control.width()}) //IE6- seems to require an explicit width on a DIV containing text
 			mainobj.togglecontrol()
-			$('a[href="' + mainobj.anchorkeyword +'"]').click(function(){
+			$('a[href="./' + mainobj.anchorkeyword +'"]').click(function(){
 				mainobj.scrollup()
 				return false
 			})
