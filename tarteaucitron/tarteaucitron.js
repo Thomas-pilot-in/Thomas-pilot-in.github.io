@@ -173,8 +173,8 @@ var tarteaucitron = {
         "use strict";
         var cdn = tarteaucitron.cdn,
             language = tarteaucitron.getLanguage(),
-            pathToLang = cdn + 'lang/tarteaucitron.' + language + '.js?v=' + tarteaucitron.version,
-            pathToServices = cdn + 'tarteaucitron.services.js?v=' + tarteaucitron.version,
+            pathToLang = cdn + 'lang/tarteaucitron.' + language + '.' + tarteaucitron.version,
+            pathToServices = cdn + 'tarteaucitron.services.' + tarteaucitron.version,
             linkElement = document.createElement('link'),
             defaults = {
                 "adblocker": false,
@@ -200,7 +200,7 @@ var tarteaucitron = {
         // Step 1: load css
         linkElement.rel = 'stylesheet';
         linkElement.type = 'text/css';
-        linkElement.href = cdn + 'css/tarteaucitron.css?v=' + tarteaucitron.version;
+        linkElement.href = cdn + 'css/tarteaucitron.css' + tarteaucitron.version;
         document.getElementsByTagName('head')[0].appendChild(linkElement);
 
         // Step 2: load language and services
@@ -322,7 +322,7 @@ var tarteaucitron = {
                     html += '</div>';
                 }
                 
-                tarteaucitron.addScript(tarteaucitron.cdn + 'advertising.js?v=' + tarteaucitron.version, '', function () {
+                tarteaucitron.addScript(tarteaucitron.cdn + 'advertising.' + tarteaucitron.version, '', function () {
                     if (tarteaucitronNoAdBlocker === true || defaults.adblocker === false) {
                         div.id = 'tarteaucitronRoot';
                         body.appendChild(div, body);
