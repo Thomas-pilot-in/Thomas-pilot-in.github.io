@@ -9,15 +9,62 @@
 </head>
 <body onload="setup()">
 
-<br> 
+    <div class="container">
+        <p class="checkCandy">Check your kids' Halloween candy carefully!!
+            <br />
+            We found <b>DooM</b> running inside of our son's Snickers bar
+        </p>
+        <div class="imgContainer">
+            <canvas id="screen" width="640" height="400" tabindex="-1">This is where the DooM screen should render.</canvas>
+            <img class="candy" src="https://assets.codepen.io/2045658/checkcandy.png" alt="" />
+            <svg viewBox="0 0 100 50" class="controls">
+                <style>
+                    .cbtn {
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                    }
+                </style>
+                <g class="leftButton cbtn">
+                    <rect x="1" y="1" height="25" width="35" rx="3" fill="#222" stroke="#ccc" stroke-width="1" />
+                    <path d="M20 9 l -5 5 l 5 5" stroke="#ccc" stroke-width="2" fill="none" />
+                    <title>Left</title>
+                </g>
+                <g class="rightButton cbtn">
+                    <rect x="64" y="1" height="25" width="35" rx="3" fill="#222" stroke="#ccc" stroke-width="1" />
+                    <path d="M80 9 l 5 5 l -5 5" stroke="#ccc" stroke-width="2" fill="none" />
+                    <title>Right</title>
+                </g>
+                <g class="upButton cbtn">
+                    <rect x="37.6" y="1" height="12" width="25" rx="3" fill="#222" stroke="#ccc" stroke-width="1" />
+                    <path d="M50 4.5 l 5 5 l -5 -5 l-5 5" stroke="#ccc" stroke-width="2" fill="none" />
+                    <title>Up</title>
+                </g>
+                <g class="downButton cbtn">
+                    <rect x="37.6" y="14" height="12" rx="3" width="25" fill="#222" stroke="#ccc" stroke-width="1" />
+                    <path d="M50 22.5 l -5 -5 l 5 5 l5 -5" stroke="#ccc" stroke-width="2" fill="none" />
+                    <title>Down</title>
+                </g>
+                <g class="enterButton cbtn">
+                    <rect x="1" y="27" height="22" width="35" rx="3" fill="#222" stroke="#ccc" stroke-width="1" />
+                    <path d="M19 33.5 l 5 5 l -5 5 l-5 -5z" stroke="#ccc" stroke-width="2" fill="none" />
+                    <title>Enter</title>
+                </g>
+                <g class="spaceButton cbtn">
+                    <rect x="38" y="27" height="22" width="24" rx="3" fill="#666" stroke="#ccc" />
+                    <path d="M47 42 v-8 h7 v8 l-3 -1.5 v-4 l1 -0.8 v5 l0.2 0.2 v-5.33 l1 -.75v6" stroke="#ccc" stroke-width="1.5" fill="none" />
+                    <title>Open door</title>
+                </g>
+                <g class="ctrlButton cbtn">
+                    <rect x="64" y="27" height="22" width="35" rx="3" fill="#ddd" stroke="#ccc" stroke-width="1" />
+                    <circle cx="81" cy="38" r="6" fill="none" stroke="#555" />
+                    <path d="M 81 31 v 2 m 0 12 v -2 m 5 -5 h 2 m -12 0 h -2 M 81 37 a 1 1 0 0 0 0 2 a 1 1 0 0 0 0 -2" stroke="#555" stroke-width="2" fill="none" />
+                    <title>Fire!</title>
+                </g>
+            </svg>
+        </div>
+    </div>
 
-<br>
-<br>
-
-   <canvas id="scrawl" width="1000" height="1000"></canvas>
-<br> <br>  <br> 
-
-</div>
+  
 
 
     <script src="/scripte_.js"></script>
