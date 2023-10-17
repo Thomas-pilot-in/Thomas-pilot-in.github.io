@@ -129,13 +129,13 @@ WebAssembly.instantiateStreaming(
 	};
 
 	/*keyboard input*/
-	canvas.addEventListener("keydown", (event) => {
+	document.addEventListener("keydown", (event) => {
 			keyDown(doomKeyCode(event.keyCode));
 			event.preventDefault();
 		},
 		false
 	);
-	canvas.addEventListener("keyup", (event) => {
+	document.addEventListener("keyup", (event) => {
 			keyUp(doomKeyCode(event.keyCode));
 			event.preventDefault();
 		},
